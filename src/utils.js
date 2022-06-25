@@ -164,7 +164,7 @@ async function initScrape(links, page) {
       waitUntil: 'networkidle0',
     });
 
-    await page.waitfor(5000);
+    await page.waitFor(5000);
     const event = await scrapeDataFromEventPage(links[i], page);
     events.push(event);
     console.log('event1', event);
